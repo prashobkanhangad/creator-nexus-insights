@@ -9,6 +9,7 @@ import Earnings from "./pages/Earnings";
 import Referrals from "./pages/Referrals";
 import Milestones from "./pages/Milestones";
 import Resources from "./pages/Resources";
+import Analytics from "./pages/Analytics";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -25,6 +26,7 @@ const App = () => (
           <Route path="/referrals" element={<Referrals />} />
           <Route path="/milestones" element={<Milestones />} />
           <Route path="/resources" element={<Resources />} />
+          <Route path="/analytics" element={<Analytics />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </BrowserRouter>
