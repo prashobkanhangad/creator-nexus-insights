@@ -1,6 +1,6 @@
 
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 import { 
   BarChart2,
   Coins,
@@ -24,11 +24,12 @@ import {
   SidebarMenuButton,
   SidebarMenuItem,
   SidebarFooter,
-  SidebarHeader,
-  SidebarTrigger
+  SidebarHeader
 } from "@/components/ui/sidebar";
 
 const DashboardSidebar = () => {
+  const location = useLocation();
+
   return (
     <Sidebar>
       <SidebarHeader className="p-4">
@@ -49,7 +50,7 @@ const DashboardSidebar = () => {
               </SidebarMenuItem>
               <SidebarMenuItem>
                 <SidebarMenuButton asChild>
-                  <Link to="/" className="flex items-center">
+                  <Link to="/earnings" className="flex items-center">
                     <Coins className="h-4 w-4 mr-2" />
                     <span>Earnings</span>
                   </Link>
@@ -57,7 +58,7 @@ const DashboardSidebar = () => {
               </SidebarMenuItem>
               <SidebarMenuItem>
                 <SidebarMenuButton asChild>
-                  <Link to="/" className="flex items-center">
+                  <Link to="/referrals" className="flex items-center">
                     <Users className="h-4 w-4 mr-2" />
                     <span>Referrals</span>
                   </Link>
@@ -65,7 +66,7 @@ const DashboardSidebar = () => {
               </SidebarMenuItem>
               <SidebarMenuItem>
                 <SidebarMenuButton asChild>
-                  <Link to="/" className="flex items-center">
+                  <Link to="/milestones" className="flex items-center">
                     <Trophy className="h-4 w-4 mr-2" />
                     <span>Milestones</span>
                   </Link>
@@ -73,7 +74,7 @@ const DashboardSidebar = () => {
               </SidebarMenuItem>
               <SidebarMenuItem>
                 <SidebarMenuButton asChild>
-                  <Link to="/" className="flex items-center">
+                  <Link to="/analytics" className="flex items-center">
                     <BarChart2 className="h-4 w-4 mr-2" />
                     <span>Analytics</span>
                   </Link>
@@ -89,23 +90,23 @@ const DashboardSidebar = () => {
             <SidebarMenu>
               <SidebarMenuItem>
                 <SidebarMenuButton asChild>
-                  <Link to="/" className="flex items-center">
+                  <Link to="/resources" className="flex items-center">
                     <Share2 className="h-4 w-4 mr-2" />
-                    <span>Invite Friends</span>
+                    <span>Content Hub</span>
                   </Link>
                 </SidebarMenuButton>
               </SidebarMenuItem>
               <SidebarMenuItem>
                 <SidebarMenuButton asChild>
-                  <Link to="/" className="flex items-center">
+                  <Link to="/resources" className="flex items-center">
                     <BookOpen className="h-4 w-4 mr-2" />
-                    <span>Content Playbook</span>
+                    <span>Playbook</span>
                   </Link>
                 </SidebarMenuButton>
               </SidebarMenuItem>
               <SidebarMenuItem>
                 <SidebarMenuButton asChild>
-                  <Link to="/" className="flex items-center">
+                  <Link to="/resources" className="flex items-center">
                     <FileText className="h-4 w-4 mr-2" />
                     <span>Assets & Banners</span>
                   </Link>
@@ -113,7 +114,7 @@ const DashboardSidebar = () => {
               </SidebarMenuItem>
               <SidebarMenuItem>
                 <SidebarMenuButton asChild>
-                  <Link to="/" className="flex items-center">
+                  <Link to="/resources" className="flex items-center">
                     <Layers className="h-4 w-4 mr-2" />
                     <span>Tier Benefits</span>
                   </Link>
@@ -127,7 +128,7 @@ const DashboardSidebar = () => {
         <SidebarMenu>
           <SidebarMenuItem>
             <SidebarMenuButton asChild>
-              <Link to="/" className="flex items-center">
+              <Link to="/settings" className="flex items-center">
                 <Settings className="h-4 w-4 mr-2" />
                 <span>Settings</span>
               </Link>
