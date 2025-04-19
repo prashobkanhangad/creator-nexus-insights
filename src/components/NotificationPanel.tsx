@@ -18,7 +18,7 @@ const notifications: Notification[] = [
   {
     id: '1',
     title: 'New Milestone Achieved!',
-    message: 'Congratulations! You've reached 10 referrals this month.',
+    message: "Congratulations! You've reached 10 referrals this month.",
     time: '2 hours ago',
     type: 'achievement',
     read: false
@@ -34,7 +34,7 @@ const notifications: Notification[] = [
   {
     id: '3',
     title: 'Nearly There!',
-    message: 'You're just 2 conversions away from reaching Pro tier.',
+    message: "You're just 2 conversions away from reaching Pro tier.",
     time: '2 days ago',
     type: 'milestone',
     read: true
